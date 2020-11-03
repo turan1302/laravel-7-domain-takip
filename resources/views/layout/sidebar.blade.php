@@ -13,9 +13,9 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="{{route('panel.index')}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
+            <span>Ana Sayfa</span></a>
     </li>
 
     <!-- Divider -->
@@ -28,15 +28,22 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link" href="{{route('panel.ayarlar.index')}}" aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-cog"></i>
-            <span>Components</span>
+            <span>Ayarlar</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+    </li>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#musteriler" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Müşteriler</span>
+        </a>
+        <div id="musteriler" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="buttons.html">Buttons</a>
-                <a class="collapse-item" href="cards.html">Cards</a>
+                <a class="collapse-item" href="{{route('panel.musteriler.index')}}">Müşteriler</a>
+                <a class="collapse-item" href="{{route('panel.musteriler.create')}}">Müşteri Ekle</a>
             </div>
         </div>
     </li>

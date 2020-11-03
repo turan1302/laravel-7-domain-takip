@@ -13,3 +13,16 @@
 <!-- Page level custom scripts -->
 <script src="{{asset('assets')}}/js/demo/chart-area-demo.js"></script>
 <script src="{{asset('assets')}}/js/demo/chart-pie-demo.js"></script>
+
+<!-- Page level plugins -->
+<script src="{{asset('assets')}}/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="{{asset('assets')}}/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="{{asset('assets')}}/js/demo/datatables-demo.js"></script>
+
+<!-- SWEET ALERT -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+<!-- CUSTOM -->
+@include('layout.custom')
