@@ -33,5 +33,27 @@
         })
     });
 
+    /** HIZLI MÜŞTERİ EKLEME */
+    $(".FastAddCustomer").change(function (){
+        var data = $(this).val();
+        if (data=="musteri_ekle"){
+            var data_url = "{{route('panel.customers.create')}}";
 
+            Swal.fire({
+                title: 'Dikkat!',
+                text: "Kullanıcı Ekleme Sayfasına Yönlendiriliyorsunuz. Gitmek İstiyor Musunuz?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '# ',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Evet! Yönlendir',
+                cancelButtonText: 'Vazgeç'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href=data_url;
+                }
+            })
+
+        }
+    });
 </script>

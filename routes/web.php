@@ -58,4 +58,10 @@ Route::group(['prefix'=>'/panel','as'=>'panel.','middleware'=>'auth'],function (
             Route::patch('yenile','AddDomainDayController@update')->name('add-day');
         });
     });
+
+    /** PROFİL */
+    Route::group(['prefix'=>'profil/{user}','as'=>'profil.'],function (){
+        Route::get('','ProfilController@edit')->name('edit');
+        Route::patch('','ProfilController@update')->name('update');
+    });
 });

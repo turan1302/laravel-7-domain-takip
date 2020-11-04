@@ -19,12 +19,13 @@
                         </div>
                         <div class="col-md-4">
                             <label for="">Domain Müşteri</label>
-                            <select class="form-control" name="domain_customer">
+                            <select class="form-control FastAddCustomer" name="domain_customer">
                                 @forelse($customers as $customer)
                                     <option value="{{$customer->id}}" {{ (old('domain_customer')==$customer->id) ? 'selected':'' }}>{{$customer->customer_name}}</option>
                                 @empty
                                     <option>Kayıt Yok</option>
                                 @endforelse
+                                    <option value="musteri_ekle">Müşteri Ekle</option>
                             </select>
                             @error('domain_customer')
                             <small style="color: red;">{{$message}}</small>
