@@ -6,7 +6,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Müşteri Güncelle</h6>
         </div>
         <div class="card-body">
-            <form action="{{route('panel.musteriler.update',$customer->id)}}" method="post">
+            <form action="{{route('panel.customers.update',$customer->id)}}" method="post">
                 @csrf
                 @method('PATCH')
                 <div class="form-group">
@@ -44,7 +44,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Güncelle</button>
-                <a href="{{route('panel.musteriler.index')}}" class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Vazgeç</a>
+                <a href="{{route('panel.customers.index')}}" class="btn btn-danger btn-sm"><i class="fa fa-times"></i> Vazgeç</a>
 
             </form>
         </div>

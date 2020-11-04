@@ -10,11 +10,11 @@ class CustomerController extends Controller
     public function index(){
 
         $customers = Customer::all();
-        return view("musteriler.index",compact('customers'));
+        return view("customers.index",compact('customers'));
     }
 
     public function create(){
-        return view('musteriler.create');
+        return view('customers.create');
     }
 
     public function store(){
@@ -23,7 +23,7 @@ class CustomerController extends Controller
     }
 
     public function edit(Customer $customer){
-       return view('musteriler.edit',compact('customer'));
+       return view('customers.edit',compact('customer'));
     }
 
     public function update(Customer $customer){
@@ -32,7 +32,7 @@ class CustomerController extends Controller
     }
 
     public function show(Customer $customer){
-        return view('musteriler.show',compact('customer'));
+        return view('customers.show',compact('customer'));
     }
 
     public function destroy(Customer $customer){

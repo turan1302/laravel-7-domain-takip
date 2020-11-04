@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Setting;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        /** AYARLARIN  HER SAYFAYA İLETİLMESİ İÇİN BUNU KULLANDIM */
+        view()->share("setting",Setting::first());
     }
 }

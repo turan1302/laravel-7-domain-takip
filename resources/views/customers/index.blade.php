@@ -34,9 +34,9 @@
                             <td>{{$customer->customer_mail}}</td>
                             <td>{{$customer->customer_gsm}}</td>
                             <td>
-                                <a href="{{route('panel.musteriler.show',$customer->id)}}" class="btn btn-warning btn-sm"><i class="fa fa-eye"></i></a>
-                                <a href="{{route('panel.musteriler.edit',$customer->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
-                                <button type="button" class="btn btn-danger btn-sm isDelete" data-url="{{route('panel.musteriler.destroy',$customer->id)}}"><i class="fa fa-trash"></i></button>
+                                <a href="{{route('panel.customers.show',$customer->id)}}" class="btn btn-warning btn-sm"><i class="fa fa-eye"></i></a>
+                                <a href="{{route('panel.customers.edit',$customer->id)}}" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                                <button type="button" class="btn btn-danger btn-sm isDelete" data-url="{{route('panel.customers.destroy',$customer->id)}}"><i class="fa fa-trash"></i></button>
                             </td>
                         </tr>
                     @empty
